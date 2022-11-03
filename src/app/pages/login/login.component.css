@@ -1,0 +1,9 @@
+.login-form-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form-field {
+    width: 300px;
+}
