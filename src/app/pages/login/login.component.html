@@ -1,13 +1,13 @@
 <form class="login-form-container" [formGroup]="loginFormGroup">
     <mat-form-field appearance="fill" class="login-form-field">
-        <mat-label>Enter your email</mat-label>
-        <input matInput placeholder="pat@example.com" formControlName="email" required>
-        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+        <mat-label>Enter your username</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="username" required>
+        <!-- <mat-error *ngIf="username.invalid">{{getErrorMessage()}}</mat-error> -->
     </mat-form-field>
     <mat-form-field appearance="fill" class="login-form-field">
         <mat-label>Enter your password</mat-label>
         <input matInput placeholder="pat@example.com" formControlName="password" required>
-        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+        <!-- <mat-error *ngIf="username.invalid">{{getErrorMessage()}}</mat-error> -->
     </mat-form-field>
-    <button class="login-form-field" mat-raised-button color="primary" (click)="submitLoginForm(loginFormGroup.value.email ?? '', loginFormGroup.value.password ?? '')">Login</button>
+    <button class="login-form-field" mat-raised-button color="primary" (click)="submitLoginForm(loginFormGroup.value.username ?? '', loginFormGroup.value.password ?? '')">Login</button>
 </form>
