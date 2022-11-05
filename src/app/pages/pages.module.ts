@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ModulesModule } from '../modules/modules.module';
+import { DateTimePipe } from '../global/pipes/date-time.pipe';
 
 const pages = [
   LoginComponent,
-  HomeComponent
+  HomeComponent,
+  DateTimePipe
 ]
 
 

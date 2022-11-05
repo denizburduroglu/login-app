@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Weather } from 'src/app/models/weather.model';
 import { LoginRestAPIService } from 'src/app/services/LoginRestAPI/login-rest-api.service';
 
 @Component({
@@ -7,6 +8,8 @@ import { LoginRestAPIService } from 'src/app/services/LoginRestAPI/login-rest-ap
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  weeklyWeather: Weather[] = [];
+  displayedWeeklyWeatherColumns: string[] = ['date', 'summary', 'temperatureC', 'temperatureF'];
 
   constructor(
     private loginRestAPIService: LoginRestAPIService
@@ -18,7 +21,7 @@ export class HomeComponent implements OnInit {
   getTheWeather() {
     this.loginRestAPIService.getTheWeather().subscribe({
       next: (value) => {
-        console.log(value);
+        this.weeklyWeather = value;
       }
     })
   }
